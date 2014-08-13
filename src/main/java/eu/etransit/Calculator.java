@@ -12,7 +12,15 @@ public class Calculator {
         this.currentValue = OperationsFactory.createAddOperation().calculate(this.currentValue, value);
     }
 
-    public void result() {
+    public void divide(double value) {
+        this.currentValue = OperationsFactory.createDivideOperation().calculate(this.currentValue, value);
+    }
 
+    public void clearWith(double initValue) {
+        this.currentValue = initValue;
+    }
+
+    public double result() {
+        return currentValue;
     }
 }
